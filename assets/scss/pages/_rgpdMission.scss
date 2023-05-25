@@ -1,0 +1,126 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+#containerRgpdAgence .rgpdMission {
+  text-align: center !important;
+  background-color: #f4f5f5 !important;
+  padding: 77px 16px !important;
+  @include mixins.xxl {
+    max-width: 1469px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  &__span {
+    font-size: 2em !important;
+    color: variables.$green-agence !important;
+  }
+  &__h2 {
+    font-size: 3em !important;
+    margin-top: 13.72px !important;
+    line-height: 1.5 !important;
+    @include mixins.desktop {
+      font-size: 4em !important;
+    }
+    @include mixins.xxl {
+      font-size: 6em !important;
+    }
+  }
+  &__hr {
+    background-color: #000108 !important;
+    width: 95px !important;
+    height: 2px !important;
+    margin: 24px auto !important;
+    border: none !important;
+  }
+  .owl-carousel {
+    padding: 0 32px !important;
+    @include mixins.desktop {
+      display: flex !important;
+      gap: 10px !important;
+    }
+    .owl-item {
+      max-height: 281px !important;
+    }
+    .owl-stage {
+      @include mixins.tablet {
+        display: flex !important;
+        gap: 24px !important;
+      }
+    }
+    .owl-nav {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      width: 100% !important;
+      transform: translate(-50%, -50%) !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      button {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative !important;
+        height: 39px !important;
+        width: 39px !important;
+        border-radius: 50% !important;
+        background-color: black !important;
+      }
+      span {
+        color: white !important;
+        font-size: 40px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__card {
+      background-color: variables.$green-agence !important;
+      height: 281px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      padding: 0 16px !important;
+      justify-content: center !important;
+      border-radius: 10px !important;
+      color: white !important;
+      @include mixins.desktop {
+        flex: 1 1 25% !important;
+        padding: 0 12px !important;
+      }
+      @include mixins.xxl {
+        padding: 0 61px !important;
+        flex: 1 1 24% !important;
+      }
+      &--circle {
+        width: 50px !important;
+        height: 50px !important;
+        background-color: transparent !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 50%;
+        border: 2px solid white !important;
+        img {
+          width: 39px !important;
+          height: 39px !important;
+        }
+      }
+      &__p {
+        margin-top: 13px !important;
+        font-size: 1.8em !important;
+        line-height: 1.4 !important;
+        @include mixins.xxl {
+          font-size: 2em !important;
+        }
+      }
+      &--padding {
+        @include mixins.xxl {
+          padding: 0 20px !important;
+        }
+      }
+    }
+  }
+}

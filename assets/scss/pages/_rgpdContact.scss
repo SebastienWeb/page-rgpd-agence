@@ -1,0 +1,154 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+#containerRgpdAgence .rgpdContact {
+  margin: 82px 0 100px !important;
+  padding: 0 16px !important;
+  @include mixins.tablet {
+    text-align: center !important;
+  }
+  @include mixins.laptop {
+    display: flex !important;
+    gap: 32px !important;
+    justify-content: center !important;
+  }
+  @include mixins.xxl {
+    text-align: left !important;
+    max-width: 1300px !important;
+    width: 100% !important;
+    margin: 82px auto 100px !important;
+  }
+  &__container {
+    @include mixins.laptop {
+      flex: 1 1 !important;
+    }
+  }
+  &__span {
+    color: variables.$green-agence;
+    font-size: 2em !important;
+    margin-bottom: 26px !important;
+    display: block !important;
+  }
+  &__h2 {
+    font-size: 3.5em !important;
+    @include mixins.laptop {
+      font-size: 4.5em !important;
+    }
+    @include mixins.xxl {
+      font-size: 6em !important;
+    }
+    @include mixins.xxxl {
+      font-size: 6em !important;
+    }
+    & span {
+      display: block !important;
+      font-size: 35px !important;
+      font-weight: bold !important;
+      font-family: "Work Sans", sans-serif !important;
+      color: variables.$thm-base;
+      @include mixins.laptop {
+        font-size: 45px !important;
+      }
+      @include mixins.xxl {
+        font-size: 60px !important;
+      }
+      @include mixins.xxxl {
+        font-size: 60px !important;
+      }
+    }
+  }
+  &__p {
+    margin: 22px 0 !important;
+    font-size: 2em !important;
+    @include mixins.xxl {
+      margin-bottom: 38px !important;
+    }
+  }
+  &__h3 {
+    color: variables.$green-agence;
+    font-size: 2em !important;
+    margin-bottom: 22px !important;
+  }
+  &__form {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    padding: 63px 41px !important;
+    @include mixins.laptop {
+      flex: 1 1 !important;
+    }
+    &__h3 {
+      font-size: 3.5em !important;
+      margin-bottom: 14px !important;
+      @include mixins.tablet {
+        text-align: left !important;
+      }
+      @include mixins.xxl {
+        font-size: 5em !important;
+        margin-bottom: 28px !important;
+      }
+    }
+    &__form {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+
+      &--input {
+        height: 59px !important;
+        padding-left: 15px !important;
+        border-radius: 4px !important;
+        border: 2px solid #cccccd;
+        &::placeholder {
+          font-size: 1.6em !important;
+        }
+      }
+      &--textarea {
+        padding-left: 15px !important;
+        padding-top: 15px !important;
+        height: 139px !important;
+        border-radius: 4px !important;
+        border: 2px solid #cccccd;
+        resize: none !important;
+        &::placeholder {
+          font-size: 1.6em !important;
+        }
+      }
+    }
+    &__containerCheckbox {
+      @include mixins.tablet {
+        margin-top: 24px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+      }
+      &__input {
+        border-radius: 4px !important;
+        border: 2px solid #cccccd !important;
+      }
+      &__p {
+        font-size: 1.2em !important;
+        opacity: 0.5 !important;
+        @include mixins.xxl {
+          font-size: 1.3em !important;
+          line-height: 1.5 !important;
+        }
+      }
+    }
+    &__submit {
+      border: none !important;
+      color: white !important;
+      background-color: variables.$thm-base !important;
+      height: 64px !important;
+      font-size: 2em !important;
+      margin-top: 56px !important;
+      transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+      cursor: pointer !important;
+      &:hover {
+        color: variables.$thm-base !important;
+        background-color: white !important;
+      }
+      @include mixins.xxl {
+        width: 177px !important;
+      }
+    }
+  }
+}

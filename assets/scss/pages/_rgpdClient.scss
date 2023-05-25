@@ -1,0 +1,66 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+#containerRgpdAgence .rgpdClient {
+  margin: 63px 0 95.8px !important;
+  text-align: left !important;
+  padding: 0 16px !important;
+  @include mixins.tablet {
+    max-width: 850px !important;
+    margin: 63px auto 95.8px !important;
+    padding: 0 !important ;
+    text-align: center !important;
+  }
+  &__span {
+    font-size: 2em !important;
+    color: variables.$green-agence !important;
+  }
+  &__h1 {
+    font-size: 3em !important;
+    margin-top: 13.72px !important;
+    @include mixins.mobile {
+      font-size: 3.5em !important;
+    }
+    @include mixins.tablet {
+      width: 60% !important;
+      font-size: 4em !important;
+      margin: 13.75px auto 0 !important;
+    }
+    @include mixins.laptop {
+      font-size: 5em !important;
+    }
+    @include mixins.desktop {
+      font-size: 6em !important;
+      width: 70% !important;
+    }
+    &--span {
+      font: bold 30px "Work Sans", sans-serif !important;
+      color: variables.$thm-base !important;
+      @include mixins.tablet {
+        font-size: 40px !important;
+      }
+      @include mixins.laptop {
+        font-size: 50px !important;
+      }
+      @include mixins.desktop {
+        font-size: 60px !important;
+      }
+    }
+  }
+  &__p {
+    font-size: 1.8em !important;
+    line-height: 1.4 !important;
+    margin: 26.28px 0 43.2px 0 !important;
+    @include mixins.tablet {
+      font-size: 2em !important;
+    }
+  }
+  &__btn {
+    background-color: variables.$green-agence;
+    border: none !important;
+    color: white !important;
+    padding: 17.8px 56px 19.2px 42px !important;
+    font-size: 1.8em !important;
+    text-align: center !important;
+  }
+}

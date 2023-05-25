@@ -1,0 +1,131 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+#containerRgpdAgence .rgpdObjectif {
+  background-color: variables.$green-agence !important;
+  padding: 80px 16px !important;
+  color: white !important;
+  text-align: center !important;
+  @include mixins.tablet {
+    margin: 100px 0 !important;
+  }
+  @include mixins.xxl {
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 150px 0 !important;
+    &::before {
+      content: url("../images/cercle.svg") !important;
+      width: 200px !important;
+      height: 200px !important;
+      position: absolute !important;
+      top: -180px !important;
+      right: 481px !important;
+    }
+  }
+  &__h2 {
+    font-size: 3.5em !important;
+    padding-bottom: 18px !important;
+    @include mixins.xxl {
+      font-size: 6em !important;
+      margin-bottom: 24px !important;
+    }
+    @include mixins.xxxl {
+      font-size: 6em !important;
+      margin-bottom: 24px !important;
+    }
+  }
+  &__container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    @include mixins.tablet {
+      flex-direction: initial !important;
+    }
+    @include mixins.xxl {
+      justify-content: center !important;
+    }
+    &__circle {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+    &__card {
+      color: black !important;
+      background-color: #f9fafb !important;
+      padding: 70px 32px !important;
+      border-radius: 5px !important;
+      @include mixins.tablet {
+        flex: 1 1 !important;
+      }
+      @include mixins.xxl {
+        flex: initial !important;
+        width: 571px !important;
+        margin: 0 !important;
+      }
+      &__h3 {
+        color: variables.$green-agence !important;
+        font-size: 2.4em !important;
+        margin-bottom: 39px !important;
+        position: relative !important;
+        width: fit-content !important;
+        &:before {
+          content: "" !important;
+          width: 100% !important;
+          height: 3px !important;
+          background-color: variables.$green-agence !important;
+          position: absolute !important;
+          bottom: 0 !important;
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+        }
+        @include mixins.xxl {
+          text-align: left !important;
+          font-size: 4em !important;
+        }
+        @include mixins.xxxl {
+          font-size: 4em !important;
+          text-align: left !important;
+        }
+      }
+      &__circle {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        justify-content: center !important;
+
+        &__p {
+          text-align: left !important;
+          font-size: 1.6em !important;
+          flex: 1 1 !important;
+          @include mixins.xxl {
+            font-size: 1.8em !important;
+          }
+        }
+        &--cercle {
+          border: 2px solid variables.$thm-base !important;
+          background-color: transparent !important;
+          width: 46px !important;
+          height: 46px !important;
+          border-radius: 50% !important;
+          position: relative !important;
+          &::before {
+            background-color: variables.$thm-base !important;
+            width: 39px !important;
+            height: 39px !important;
+            border-radius: 50% !important;
+            content: "✔";
+            color: white !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            font-size: 1.6em !important;
+          }
+        }
+      }
+    }
+  }
+}

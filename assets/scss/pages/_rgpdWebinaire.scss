@@ -1,0 +1,80 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
+#containerRgpdAgence .rgpdWebinaire {
+  @include mixins.xxl {
+    position: relative !important;
+    display: flex !important;
+    justify-content: end !important;
+    max-width: 1469px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+  }
+  &__ytb {
+    width: 100% !important;
+    & iframe {
+      width: 100% !important;
+    }
+    @include mixins.xxl {
+      position: absolute !important;
+      width: 40% !important;
+      left: 200px !important;
+      top: -50px !important;
+    }
+  }
+  &__content {
+    background-color: variables.$thm-base;
+    &__container {
+      padding: 36px 26px 90px !important;
+      text-align: center !important;
+      @include mixins.xxl {
+        text-align: left !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 36px 26px 36px 100px !important;
+        border: 3px solid white !important;
+      }
+    }
+    @include mixins.xxl {
+      width: 50% !important;
+      padding: 6px !important;
+    }
+  }
+  &__h2 {
+    margin: 0 0 16.6px !important;
+    font-size: 3.5em !important;
+    @include mixins.xxl {
+      font-size: 4em !important;
+    }
+  }
+  &__firstContent,
+  &__secondContent {
+    color: white !important;
+    font-size: 1.6em !important;
+    line-height: 1.5 !important;
+    @include mixins.xxl {
+      font-size: 2em !important;
+    }
+  }
+  &__firstContent {
+    margin-bottom: 24px !important;
+  }
+  &__btn {
+    border: none !important;
+    padding: 14px 48px !important;
+    margin-top: 23px !important;
+    font-size: 1.7em !important;
+    transition: opacity 250ms ease-in-out !important;
+    cursor: pointer !important;
+    &:hover {
+      opacity: 0.9 !important;
+    }
+    @include mixins.xxl {
+      width: 355px !important;
+      height: 64px !important;
+      font-size: 2em !important;
+    }
+  }
+}

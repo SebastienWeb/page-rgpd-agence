@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Work+Sans:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+}
+*,
+html,
+body {
+  font: 400 10px/1.2 "Open Sans", sans-serif !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: bold 10px/1.2 "Work Sans", sans-serif !important;
+}

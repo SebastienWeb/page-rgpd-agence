@@ -1,0 +1,291 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+#containerRgpdAgence .rgpdEtape {
+  margin: 100px 0 !important;
+  text-align: center !important;
+  position: relative !important;
+  &__container {
+    @include mixins.xxl {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      max-width: 1300px !important;
+      width: 100% !important;
+      margin: 100px auto 200px !important;
+    }
+    &__right {
+      display: none !important;
+      @include mixins.xxl {
+        display: block !important;
+      }
+    }
+  }
+  &__span {
+    color: variables.$green-agence;
+    font-size: 1.8em !important;
+  }
+  &__h2 {
+    font-size: 2.8em !important;
+    margin: 24px 0 49px !important;
+    @include mixins.xxl {
+      font-size: 6em !important;
+      width: 60% !important;
+      margin: 24px auto 108px !important;
+    }
+    @include mixins.xxxl {
+      width: 50% !important;
+    }
+  }
+  &__circle {
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: rotate(-15deg) !important;
+    text-align: center !important;
+    border: 3px solid variables.$green-agence !important;
+    margin: 0 auto !important;
+    @include mixins.xxl {
+      width: 320px !important;
+      height: 320px !important;
+      position: absolute !important;
+      top: 73px !important;
+    }
+    @include mixins.xxxl {
+      left: 190px !important;
+    }
+    &--circle {
+      background-color: variables.$green-agence !important;
+      width: 231px !important;
+      height: 231px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 16px !important;
+      @include mixins.xxl {
+        width: 300px !important;
+        height: 300px !important;
+      }
+    }
+    &__p {
+      font-size: 1.8em !important;
+      color: white !important;
+      &--span {
+        font-size: 72px !important;
+        color: black !important;
+        @include mixins.xxl {
+          font-size: 80px !important;
+        }
+      }
+    }
+  }
+  .owl-carousel {
+    padding: 0 32px !important;
+    margin-top: -32px !important;
+    @include mixins.desktop {
+      display: flex !important;
+      flex-direction: column !important;
+      flex-wrap: wrap !important;
+      gap: 26px !important;
+    }
+    .owl-item {
+      max-height: 281px !important;
+    }
+    .owl-stage {
+      @include mixins.tablet {
+        display: flex !important;
+        gap: 24px !important;
+      }
+    }
+    .owl-nav {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      width: 100% !important;
+      transform: translate(-50%, -50%) !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      button {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative !important;
+        height: 39px !important;
+        width: 39px !important;
+        border-radius: 50% !important;
+        background-color: black !important;
+      }
+      span {
+        color: white !important;
+        font-size: 40px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__card {
+      background-color: #f4f5f5 !important;
+      height: 281px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      padding: 0 16px !important;
+      justify-content: center !important;
+      @include mixins.desktop {
+        padding: 0 12px !important;
+        height: initial !important;
+      }
+      @include mixins.xxl {
+        padding: 20px 75px 20px 49px !important;
+        flex-direction: initial !important;
+        position: relative !important;
+        &:first-child {
+          padding: 46px 68px 51px 23px !important;
+          width: 549px !important;
+          &:before {
+            z-index: 1 !important;
+            content: url("../images/right.svg") !important;
+            position: absolute !important;
+            right: -95px !important;
+            bottom: -59px !important;
+          }
+        }
+        &:nth-child(2) {
+          padding: 46px 48px 46px 23px !important;
+          margin-left: 90px !important;
+          &:before {
+            z-index: 1 !important;
+            content: url("../images/left.svg") !important;
+            position: absolute !important;
+            left: -95px !important;
+            bottom: -59px !important;
+          }
+        }
+        &:nth-child(3) {
+          padding: 46px 48px 39px 23px !important;
+          width: 549px !important;
+          &:before {
+            z-index: 1 !important;
+            content: url("../images/right.svg") !important;
+            position: absolute !important;
+            right: -95px !important;
+            bottom: -59px !important;
+          }
+        }
+        &:nth-child(4) {
+          padding: 41px 48px 41px 23px !important;
+          margin-left: 90px !important;
+          &:before {
+            z-index: 1 !important;
+            content: url("../images/left.svg") !important;
+            position: absolute !important;
+            left: -95px !important;
+            bottom: -59px !important;
+          }
+        }
+        &:nth-child(5) {
+          width: 549px !important;
+          &:before {
+            z-index: 1 !important;
+            content: url("../images/right.svg") !important;
+            position: absolute !important;
+            right: -95px !important;
+            bottom: -59px !important;
+          }
+        }
+        &:nth-child(5),
+        &:nth-child(6) {
+          padding: 30px 0px 35px 23px !important;
+          height: 166px !important;
+        }
+        &:nth-child(6) {
+          padding: 30px 250px 35px 23px !important;
+          margin-left: 90px !important;
+        }
+      }
+      &--circle {
+        width: 50px !important;
+        height: 50px !important;
+        background-color: variables.$thm-base !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 50%;
+        font-size: 3em !important;
+        color: white !important;
+
+        @include mixins.xxl {
+          margin-right: 24px !important;
+          width: 74px !important;
+          height: 74px !important;
+        }
+      }
+      &__p {
+        margin-top: 13px !important;
+        font-size: 1.8em !important;
+        line-height: 1.4 !important;
+        text-align: left !important;
+        @include mixins.xxl {
+          font-size: 2em !important;
+          flex: 1 1 !important;
+          margin-top: 0 !important;
+        }
+      }
+      &--padding {
+        @include mixins.xxl {
+          padding: 0 20px !important;
+        }
+      }
+      &__alternative {
+        @include mixins.xxl {
+          border: 2px dashed #3f3f3f !important;
+          background-color: transparent !important;
+        }
+        &__w {
+          @include mixins.xxl {
+            width: 118px !important;
+          }
+        }
+        &--circle {
+          @include mixins.xxl {
+            background-color: variables.$green-agence !important;
+          }
+        }
+      }
+    }
+    &__containerContent {
+      &__span {
+        display: none !important;
+        font-family: "Work Sans", sans-serif !important;
+        font-weight: bold !important;
+        font-size: 24px !important;
+        @include mixins.xxl {
+          display: block !important;
+          text-align: left !important;
+        }
+      }
+    }
+  }
+  &__left {
+    display: none !important;
+    @include mixins.xxl {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 50% !important;
+      & img {
+        width: 100% !important;
+      }
+    }
+  }
+}

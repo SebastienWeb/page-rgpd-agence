@@ -1,0 +1,162 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+#containerRgpdAgence .rgpdAccompagnent {
+  background-color: variables.$thm-base !important;
+  padding: 55px 40px !important;
+  @include mixins.xxl {
+    position: relative !important;
+    z-index: -1 !important;
+    margin-top: -62px !important;
+    padding-top: 219px !important;
+  }
+  &__circle {
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: rotate(-15deg) !important;
+    text-align: center !important;
+    border: 3px solid white !important;
+    margin: 0 auto !important;
+    @include mixins.xxl {
+      position: absolute !important;
+      top: 76px !important;
+      left: 366px !important;
+    }
+    @include mixins.xxxl {
+      left: 521px !important;
+    }
+    &--circle {
+      background-color: rgb(255 255 255 / 0.1) !important;
+      width: 231px !important;
+      height: 231px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 0 16px !important;
+    }
+    &__p {
+      font-size: 1.8em !important;
+      color: white !important;
+      &--span {
+        font-size: 72px !important;
+        color: black !important;
+      }
+    }
+    &__pSecond {
+      color: white !important;
+      font-size: 2em !important;
+      font-family: "Work Sans", sans-serif !important;
+      font-weight: bold !important;
+    }
+  }
+  &__container {
+    @include mixins.xxl {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 24px !important;
+    }
+    &__right {
+      text-align: center !important;
+      @include mixins.xxl {
+        text-align: left !important;
+      }
+      @include mixins.xxxl {
+        width: 25% !important;
+      }
+      &__span {
+        display: block !important;
+        margin-top: 52px !important;
+        font-size: 2em !important;
+        color: white !important;
+      }
+      &__h2 {
+        font-size: 2.8em !important;
+        margin: 26px 0 !important;
+        @include mixins.xxl {
+          font-size: 4em !important;
+        }
+      }
+      &__p {
+        color: white !important;
+        font-size: 1.6em !important;
+        line-height: 1.5 !important;
+        margin-bottom: 60px !important;
+        @include mixins.xxl {
+          font-size: 2em !important;
+        }
+      }
+      &__containerCard {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        @include mixins.laptop {
+          flex-direction: initial !important;
+        }
+        @include mixins.xxl {
+          width: 900px !important;
+        }
+        &__card {
+          position: relative !important;
+          background-color: white !important;
+          border-radius: 5px !important;
+          padding: 63px 53px !important;
+          flex: 1 1 !important;
+          width: 250px !important;
+          margin: 0 auto !important;
+          text-align: center !important;
+          @include mixins.mobile {
+            width: 348px !important;
+          }
+          @include mixins.laptop {
+            flex: initial !important;
+          }
+          @include mixins.xxl {
+            padding: 32px 41px 63px !important;
+          }
+          @include mixins.laptop {
+            &:first-child::before,
+            &:nth-child(2)::before {
+              content: "+" !important;
+              position: absolute !important;
+              background: black !important;
+              color: white !important;
+              font-size: 40px !important;
+              border: 5px solid orange !important;
+              width: 50px !important;
+              height: 50px !important;
+              left: 95% !important;
+              z-index: 1 !important;
+              top: 50% !important;
+              border-radius: 50% !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+            }
+          }
+          &__img {
+            max-width: 100% !important;
+            max-height: 100% !important;
+            object-fit: contain !important;
+            width: 100%;
+          }
+          &__h3 {
+            margin: 30px 0 18px !important;
+            font-size: 2.6em !important;
+          }
+          &__p {
+            font-size: 1.8em !important;
+            line-height: 1.5 !important;
+          }
+        }
+      }
+    }
+  }
+}
